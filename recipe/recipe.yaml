@@ -12,7 +12,7 @@ source:
   sha256: 280edf9dc877d79cedf26b1ce02bbb8bec9d5541a44aacbd0ef40cb59a15574b
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -50,7 +50,7 @@ tests:
       run:
         - cmake-package-check
         - ${{ compiler('c') }}
-        - ${{ compiler('cxx') }}             
+        - ${{ compiler('cxx') }}
   - python:
       imports:
         - softrobots
