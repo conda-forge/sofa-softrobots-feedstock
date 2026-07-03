@@ -1,6 +1,6 @@
 context:
   name: sofa-softrobots
-  version: "25.12.00"
+  version: "26.06"
   major_minor: ${{ (version | split('.'))[:2] | join('.') }}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/SofaDefrost/SoftRobots/archive/refs/tags/release-v${{ major_minor }}.tar.gz
-  sha256: 280edf9dc877d79cedf26b1ce02bbb8bec9d5541a44aacbd0ef40cb59a15574b
+  sha256: b5d3f133e1c1f636f65fa18a60b931396b35ba492ef27101474171aed1c301cb
 
 build:
   number: 0
@@ -50,7 +50,7 @@ tests:
       run:
         - cmake-package-check
         - ${{ compiler('c') }}
-        - ${{ compiler('cxx') }}             
+        - ${{ compiler('cxx') }}
   - python:
       imports:
         - softrobots
